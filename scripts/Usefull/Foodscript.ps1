@@ -7,7 +7,7 @@ Enum Food
     Pizza
     Quesedias
     Lasagne
-    Älplermakkeronen
+    Älplermakkaronen
     Apfelwähe
     Apprikosenwähe
     Rabarberwähe
