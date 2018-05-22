@@ -1,15 +1,25 @@
 ﻿# Food selector for the week!
 #random Stuff mixed for every day.
-function Random-Food{
-
-Param(
-     [array]$InputList
-   )
-
-   return $InputList | Get-Random -Count 7 
-   $InputList.Count;
+Enum Food
+{
+    Tacos
+    Pizza
+    Quesedias
+    Lasagne
+    Älplermakkeronen
+    Apfelwähe
+    Apprikosenwähe
+    Rabarberwähe
+    Käsekuchen
+    Pasta
+    Ravioli
+    Empanadas
 }
+function Get-Food {
+    $foodsOfWeek = [Enum]::GetValues([Food]) | Get-Random -Count 7
 
-$a = 1..200
-Write-Output (Random-Food -InputList $a)
-
+    foreach ($day in [Enum]::GetValues([DayOfWeek])) {
+        ([string]$day).Substring(0, 3) + ': ' + $foodsOfWeek[[DayOfWeek]::$day]
+    }
+}
+Get-Food
