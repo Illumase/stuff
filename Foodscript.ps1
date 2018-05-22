@@ -1,7 +1,8 @@
-﻿# Food selector for the week!
+# Food selector for the week!
 #random Stuff mixed for every day.
+
 Enum Food
-{
+{#Add Food here:
     Tacos
     Pizza
     Quesedias
